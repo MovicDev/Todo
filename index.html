@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrayClass</title>
+    <link rel="stylesheet" href="bootstrap.css">
+<style>
+  body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+</style>
+</head>
+<body>
+    <div class="container-fluid mx-auto col-lg-7 shadow-sm col-10 mt-lg-5 mt-2 p-3">
+        <div id="err" class="alert alert-danger text-center" style="display: none;">Space can not be empty</div>
+        <div id="errR" class="alert alert-success text-center" style="display: none;">Successfully Submitted</div>
+        <h1 class="text-center text-decoration-underline my-3 text-secondary">MovicDev Todo App</h1>
+        <div class="alert alert-danger text-center fw-bold" style="display: none;" id="er">Space can not be Empty</div>
+        <input type="text" name="" id="inp" placeholder="Input Todo" class="form-control shadow-none form-control-sm my-2 bg-transparent text-dark" >
+        <input type="text" name="" id="inpTwo" placeholder="Input Todo Description" class="form-control shadow-none form-control-sm my-2 bg-transparent text-dark" >
+        <button class="btn  my-2 w-100 form-control-sm rounded-0 text-dark" onclick="submitTodo()" style="border: 1px solid rgb(253, 7, 7); font-weight: bold;">Submit</button>
+    
+    </div>
+    <!-- <div class="container-fluid mx-auto col-lg-7 col-10 shadow-sm mt-lg-5 mt-2 p-3">
+        <div class="container">
+         <div class="row" id="show">
+               <div class="mx-0 text-center justify-content-center">
+                 <th colspan="3" class="text-center">No item added yet to store</th>
+                 <th colspan="3" class="text-center" id="impp" style="display: none;">No item added yet to store</th>
+               </div>
+             </div>
+        </div> 
+           </div>-->
+    <div class="container-fluid mx-auto col-lg-7 shadow-sm col-10 mt-lg-5 mt-2 p-3">
+    <table class="table table-bordered table-striped table-hover w-100">
+        <thead>
+            <tr>
+                <th>S/n</th>
+                <th>Todo</th>
+                <th>Todo Description</th>
+                <th class="text-center">Action</th>
+            </tr>
+        </thead>
+        <tbody id="show">  
+            <tr>
+                <th colspan="5" class="text-center">No item added yet to store</th>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+<!-- Modal For Edit -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" style="backdrop-filter: blur(10px);">
+    <div class="modal-dialog ">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 text-dark text-center fw-bold" id="staticBackdropLabel">Edit Todo</h1>
+          <button type="button" class="btn-close text-light" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-light">
+                <input type="text" id="todoT" name="" placeholder="Todo" class="my-2 form-control form-control-sm rounded-0 shadow-none ">
+                <input type="text" id="todoD" name="" placeholder="Todo Description" class="my-2 form-control form-control-sm rounded-0 shadow-none ">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-light fw-bold"  onclick="editTodo()" data-bs-dismiss="modal">Update</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <script src="script.js"></script>
+    <script src="bootstrap.js"></script>
+</body>
+</html>
